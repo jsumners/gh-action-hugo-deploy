@@ -6,6 +6,5 @@ RUN apk add --no-cache \
   bash \
   git \
   hugo
-# RUN go get -v github.com/gohugoio/hugo
 
 ENTRYPOINT [ "/entrypoint.sh" ]

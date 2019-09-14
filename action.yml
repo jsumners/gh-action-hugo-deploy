@@ -6,10 +6,6 @@ branding:
   color: 'gray-dark'
 
 inputs:
-  # source_repo:
-  #   description: 'The repository with the Hugo source project'
-  #   required: true
-
   destination_repo:
     description: 'The repository the build output will be committed to'
     required: true
