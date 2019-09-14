@@ -22,5 +22,6 @@ cd ${DEST_DIR}
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 git add --all
-git commit -m "Automated deployment: $(date -R) ${GITHUB_SHA}"
+git commit -m "Automated deployment: $(date -R) ${GITHUB_SHA}" || \
+  echo 'No changes, skipping publish' && exit 0
 git push
