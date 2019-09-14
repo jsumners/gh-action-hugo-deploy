@@ -10,8 +10,12 @@ git clone --depth=1 --single-branch --branch master \
   ${DEST_DIR}
 
 ${INPUT_BUILD_CMD}
-cp -R ${GITHUB_WORKSPACE}/${INPUT_BUILD_DIR}/* ${DEST_DIR}
-cp -R ${GITHUB_WORKSPACE}/${INPUT_BUILD_DIR}/.* ${DEST_DIR}
+cp -R \
+  ${GITHUB_WORKSPACE}/${GITHUB_REPOSITORY}/${INPUT_BUILD_DIR}/* \
+  ${DEST_DIR}
+cp -R \
+  ${GITHUB_WORKSPACE}/${GITHUB_REPOSITORY}/${INPUT_BUILD_DIR}/.* \
+  ${DEST_DIR}
 
 cd ${DEST_DIR}
 git config user.name "${GITHUB_ACTOR}"
