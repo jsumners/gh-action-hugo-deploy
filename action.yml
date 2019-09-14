@@ -18,10 +18,10 @@ inputs:
     description: 'A GitHub API token with read and commit access to the destination repo'
     required: true
 
-  bulid_cmd:
-    description: 'The Hugo command line to execute to build the site'
+  hugo_args:
+    description: 'The arguments to pass to Hugo when buliding the site'
     required: true
-    default: 'hugo'
+    default: ''
 
   build_dir:
     description: 'The directory into which Hugo writes the built site'

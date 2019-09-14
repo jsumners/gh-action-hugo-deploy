@@ -9,9 +9,7 @@ git clone --depth=1 --single-branch --branch master \
   ${DEST_URL} \
   ${DEST_DIR}
 
-env
-
-${INPUT_BUILD_CMD}
+hugo ${INPUT_HUGO_ARGS}
 
 cp -R \
   ${GITHUB_WORKSPACE}/${INPUT_BUILD_DIR}/* \
