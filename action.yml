@@ -1,0 +1,33 @@
+name: 'Deploy Hugo Site'
+description: 'Deploy a Hugo based site to a .github.io repository'
+
+branding:
+  icon: 'cloud-drizzle'
+  color: 'gray-dark'
+
+inputs:
+  # source_repo:
+  #   description: 'The repository with the Hugo source project'
+  #   required: true
+
+  destination_repo:
+    description: 'The repository the build output will be committed to'
+    required: true
+
+  destination_token:
+    description: 'A GitHub API token with read and commit access to the destination repo'
+    required: true
+
+  bulid_cmd:
+    description: 'The Hugo command line to execute to build the site'
+    required: true
+    default: 'hugo'
+
+  build_dir:
+    description: 'The directory into which Hugo writes the built site'
+    required: true
+    default: 'public'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
